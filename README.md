@@ -105,3 +105,6 @@ If validation fails, regeneration occurs automatically.
 ```bash
 pip install -r requirements.txt
 python app.py
+```
+
+<span style="text-align: center;">THANKS FOR VISITING! 🍪</span>
