@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCOE - The Complexity of Ease</title>
+    
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
 
+<!-- THEME --> 
+    <div class="container">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <span class="icon sun">☀️</span>
+                    <span class="icon moon">🌙</span>
+                </div>
+            </label>
+        </div>
+
+
+<!-- HEADER -->
+        <header>
+            <h1>TCOE</h1>
+            <p class="subtitle">The Complexity of Ease</p>
+        </header>
+
+
+<!-- SELECT COMPLEXITY -->
+        <main>
+            <div class="section-label">Select Complexity</div>
+            <div class="level-container">
+                <button class="level-btn active" data-level="1">Elementary</button>
+                <button class="level-btn" data-level="2">Middle</button>
+                <button class="level-btn" data-level="3">High</button>
+                <button class="level-btn disabled" title="Coming soon">University <span>(Soon)</span></button>
+                <button class="level-btn disabled" title="Coming soon">Olympiad <span>(Soon)</span></button>
+            </div>
+
+
+<!-- TARGET RESULT -->
+            <div class="section-label">Target Result</div>
+            <div class="result-picker">
+                <button class="res-btn active">1</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+                <button class="res-btn disabled" title="Coming soon">?</button>
+            </div>
+
+
+<!-- FILTERS -->
+            <div class="filter-section" title="Coming Soon">
+                <label><input type="checkbox" checked value="trig"> Trigonometry</label>
+                <label><input type="checkbox" checked value="logarit"> Logarithm</label>
+                <label><input type="checkbox" checked value="expo"> Exponential</label>
+                <label><input type="checkbox" checked value="lim"> Limit</label>
+                <label><input type="checkbox" checked value="deriv"> Derivative</label>
+                <label><input type="checkbox" checked value="integral"> Integral</label>
+                <span class="soon-badge">Filters Coming Soon</span>
+            </div>
+
+
+<!-- EXPRESSION -->
+            <div class="display-box">
+                <div class="expression-area">
+                    <div id="math-expression">
+                        $$1$$
+                    </div>
+                </div>
+
+
+<!-- RESULT -->
+                <div class="result-area">
+                    <span>= <span id="result">1</span></span>
+                </div>
+            </div>
+
+
+<!-- BUTTONS -->
+            <div class="action-controls">
+                <button id="generate-btn" class="main-btn" onclick="generateExpression()">Generate</button>
+                <button id="reset-btn" class="reset-btn" title="Return to Default">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                    Reset
+                </button>
+            </div>
+
+
+<!-- LEVEL INFO -->
+            <div class="level-info">
+                <div class="info-card">
+                    <h4>Elementary</h4>
+                    <p>Arithmetic, fractions, and basic operations.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Middle</h4>
+                    <p>Powers, square roots, complex fractions, expressions containing the variable x.</p>
+                </div>
+                <div class="info-card">
+                    <h4>High</h4>
+                    <p>Trigonometry, Logarithms, Complex & Imaginary numbers, Exponential, Derivatives, Integrals and Limits</p>
+                </div>
+                <div class="info-card locked">
+                    <h4>University</h4>
+                    <p><em>Coming soon.</em></p>
+                </div>
+                <div class="info-card locked">
+                    <h4>Olympiad</h4>
+                    <p><em>Coming soon.</em></p>
+                </div>
+            </div>
+        </main>
+
+
+<!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 TCOE - The Complexity of Ease: Where complexity meets simplicity.</p>
+        </footer>
+    </div>
+
+
+<!-- LOADING -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-box">
+            <div class="spinner"></div>
+            <p>Generating...</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
