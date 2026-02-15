@@ -356,9 +356,9 @@ def generate():
 
 
 if __name__ == "__main__":
-    # Use platform-provided PORT when deployed (e.g., cloud environment)
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    # gunicorn backend:app
+    app.run(debug=True)
+
 
 
 
